@@ -1,0 +1,8 @@
+---
+- name: Clone dotfiles
+  git:
+    repo: https://github.com/izinovik/dotfiles
+    dest: /home/izinovik/dotfiles
+  ignore_errors: yes
+
+...

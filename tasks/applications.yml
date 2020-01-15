@@ -1,0 +1,23 @@
+---
+- name: Add GPG keys
+  apt_key:
+    id: "{{ item }}"
+    keyserver: keyserver.ubuntu.com
+    state: present
+  loop: "{{ apt_keys }}"
+
+- name: Add repositories
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  loop: "{{ repos }}"
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ applications }}"
+...

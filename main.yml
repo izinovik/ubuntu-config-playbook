@@ -1,0 +1,48 @@
+---
+# tasks file for ubuntu-config-playbook
+- name: Configure Ubuntu 18.04 for Igor Zinovik
+  hosts: localhost
+  vars:
+    dotfiles_dir: /home/izinovik/dotfiles
+    make_targets:
+      - tmux
+      - ssh
+      - vim
+      - zshrc
+    applications:
+      # - skype
+      - docker.io
+      - dropbox
+      - firefox-esr
+      - git
+      - jq
+      - keepassxc
+      - kubectl
+      - make
+      - spectrwm
+      - ssh
+      - teamviewer
+      - tmux
+      - vim
+      - vlc
+      - xbindkeys
+      - xxkb
+      - zsh
+    repos:
+      - "deb http://linux.dropbox.com/ubuntu bionic main"
+      - "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+      - "deb http://linux.teamviewer.com/deb stable main"
+      - "ppa:phoerious/keepassxc"
+      - "ppa:mozillateam/ppa"
+    apt_keys:
+      - 1C61A2656FB57B7E4DE0F4C1FC918B335044912E # Dropbox
+      - 8CAE012EBFAC38B17A937CD8C5E224500C1289C0 # Teamviewer
+      - 54A647F9048D5688D7DA2ABE6A030B21BA07F4FB
+
+
+  tasks:
+   - include: tasks/applications.yml
+     tags: [ apps ]
+   - include: tasks/git.yml
+   - include: tasks/make.yml
+...

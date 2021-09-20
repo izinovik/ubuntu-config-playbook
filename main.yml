@@ -5,10 +5,8 @@
   vars:
     dotfiles_dir: /home/izinovik/dotfiles
     make_targets:
-      - tmux
-      - ssh
+      - shell
       - vim
-      - zshrc
     applications:
       # - skype
       - docker.io

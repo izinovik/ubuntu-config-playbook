@@ -25,6 +25,7 @@
       - tmux
       - vim
       - vlc
+      - unbound
       - xbindkeys
       - xxkb
       - zsh

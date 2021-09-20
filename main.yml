@@ -31,11 +31,12 @@
       - "deb http://apt.kubernetes.io/ kubernetes-xenial main"
       - "deb http://linux.teamviewer.com/deb stable main"
       - "ppa:phoerious/keepassxc"
-      - "ppa:jonathonf/firefox-esr"
+      - "ppa:mozillateam/firefox-esr"
     apt_keys:
       - 1C61A2656FB57B7E4DE0F4C1FC918B335044912E # Dropbox
       - 8CAE012EBFAC38B17A937CD8C5E224500C1289C0 # Teamviewer
       - 54A647F9048D5688D7DA2ABE6A030B21BA07F4FB
+      - 0AB215679C571D1C8325275B9BDB3D89CE49EC21 # Mozilla team PPA
 
 
   tasks:

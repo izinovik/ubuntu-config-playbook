@@ -8,7 +8,6 @@
       - shell
       - vim
     applications:
-      # - skype
       - docker.io
       - dropbox
       - firefox-esr

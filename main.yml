@@ -9,6 +9,7 @@
       - vim
     applications:
       - acpi
+      - blueman
       - docker.io
       - dropbox
       - dnssec-trigger

@@ -1,6 +1,6 @@
 ---
 # tasks file for ubuntu-config-playbook
-- name: Configure Ubuntu 18.04 for Igor Zinovik
+- name: Configure Ubuntu 20.04 for Igor Zinovik
   hosts: localhost
   vars:
     dotfiles_dir: /home/izinovik/dotfiles
@@ -10,6 +10,8 @@
     applications:
       - docker.io
       - dropbox
+      - dnssec-trigger
+      - curl
       - firefox-esr
       - git
       - jq
@@ -24,7 +26,9 @@
       - vlc
       - unbound
       - xbindkeys
+      - xterm
       - xxkb
+      - xtrlock
       - zsh
     repos:
       - "deb http://linux.dropbox.com/ubuntu xenial main"

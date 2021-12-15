@@ -8,6 +8,7 @@
       - shell
       - vim
     applications:
+      - acpi
       - docker.io
       - dropbox
       - dnssec-trigger

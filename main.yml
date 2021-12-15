@@ -19,6 +19,7 @@
       - keepassxc
       - kubectl
       - make
+      - net-tools
       - spectrwm
       - ssh
       - teamviewer

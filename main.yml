@@ -34,6 +34,9 @@
       - xxkb
       - xtrlock
       - zsh
+    snaps:
+      - restic
+      - skype
     repos:
       - "deb http://linux.dropbox.com/ubuntu xenial main"
       - "deb http://apt.kubernetes.io/ kubernetes-xenial main"
@@ -48,6 +51,7 @@
   tasks:
    - include: tasks/applications.yml
      tags: [ apps ]
+   - include: tasks/snaps.yml
    - include: tasks/git.yml
    - include: tasks/make.yml
 ...

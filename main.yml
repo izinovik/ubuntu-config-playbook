@@ -22,6 +22,7 @@
       - make
       - net-tools
       - spectrwm
+      - scrot
       - ssh
       - teamviewer
       - tmux

@@ -37,6 +37,7 @@
     snaps:
       - restic
       - skype
+      - telegram-desktop
     repos:
       - "deb http://linux.dropbox.com/ubuntu xenial main"
       - "deb http://apt.kubernetes.io/ kubernetes-xenial main"

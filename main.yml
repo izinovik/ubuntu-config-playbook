@@ -35,6 +35,7 @@
       - xtrlock
       - zsh
     snaps:
+      - chromium
       - restic
       - skype
       - telegram-desktop

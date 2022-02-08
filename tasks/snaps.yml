@@ -1,0 +1,7 @@
+---
+- name: Installing snap packages
+  community.general.snap:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ snaps }}"
+...

@@ -10,10 +10,10 @@
     applications:
       - acpi
       - blueman
+      - curl
+      - dnssec-trigger
       - docker.io
       - dropbox
-      - dnssec-trigger
-      - curl
       - firefox-esr
       - git
       - jq
@@ -21,18 +21,19 @@
       - kubectl
       - make
       - net-tools
-      - spectrwm
       - scrot
+      - spectrwm
       - ssh
       - teamviewer
       - tmux
+      - unbound
       - vim
       - vlc
-      - unbound
       - xbindkeys
+      - xclip
       - xterm
-      - xxkb
       - xtrlock
+      - xxkb
       - zsh
     snaps:
       - chromium

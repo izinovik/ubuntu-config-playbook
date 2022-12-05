@@ -40,6 +40,7 @@
       - restic
       - skype
       - telegram-desktop
+      - zoom-client
     repos:
       - "deb http://apt.kubernetes.io/ kubernetes-xenial main"
       - "deb http://linux.teamviewer.com/deb stable main"

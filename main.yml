@@ -41,13 +41,13 @@
       - skype
       - telegram-desktop
     repos:
-      - "deb http://linux.dropbox.com/ubuntu xenial main"
       - "deb http://apt.kubernetes.io/ kubernetes-xenial main"
       - "deb http://linux.teamviewer.com/deb stable main"
+      - "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
       - "ppa:phoerious/keepassxc"
       - "ppa:mozillateam/ppa"
     apt_keys:
-      - 1C61A2656FB57B7E4DE0F4C1FC918B335044912E # Dropbox
+      - EE2C95AB58DC2B0138D16B4FEFC4571D7C90E5AF # Yandex Disk
       - 8CAE012EBFAC38B17A937CD8C5E224500C1289C0 # Teamviewer
       - 0AB215679C571D1C8325275B9BDB3D89CE49EC21 # Mozilla team PPA
 

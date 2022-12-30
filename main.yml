@@ -56,6 +56,7 @@
    - include: tasks/applications.yml
      tags: [ apps ]
    - include: tasks/snaps.yml
+     tags: [ apps ]
    - include: tasks/git.yml
    - include: tasks/make.yml
    - include: tasks/files.yml

@@ -1,0 +1,9 @@
+---
+- name: Copying 'has_option' file for XOrg (fixes ssh-agent startup during X session)
+  copy:
+    src: files/01x11-has_option
+    dest: /etc/X11/Xsession.d/01x11-has_option
+    owner: root
+    group: root
+    mode: '0644'
+...

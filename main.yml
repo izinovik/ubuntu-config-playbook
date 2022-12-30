@@ -58,4 +58,6 @@
    - include: tasks/snaps.yml
    - include: tasks/git.yml
    - include: tasks/make.yml
+   - include: tasks/files.yml
+   - include: tasks/a2dp-bluetooth-pulseaudio.yml
 ...

@@ -13,8 +13,6 @@
       - curl
       - dnssec-trigger
       - docker.io
-      - dropbox
-      - firefox-esr
       - git
       - jq
       - keepassxc
@@ -24,7 +22,6 @@
       - scrot
       - spectrwm
       - ssh
-      - teamviewer
       - tmux
       - unbound
       - vim
@@ -42,15 +39,11 @@
       - telegram-desktop
       - zoom-client
     repos:
-      - "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-      - "deb http://linux.teamviewer.com/deb stable main"
+      - "deb [arch=amd64] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /"
       - "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
       - "ppa:phoerious/keepassxc"
-      - "ppa:mozillateam/ppa"
     apt_keys:
       - EE2C95AB58DC2B0138D16B4FEFC4571D7C90E5AF # Yandex Disk
-      - 8CAE012EBFAC38B17A937CD8C5E224500C1289C0 # Teamviewer
-      - 0AB215679C571D1C8325275B9BDB3D89CE49EC21 # Mozilla team PPA
 
   tasks:
    - include: tasks/applications.yml

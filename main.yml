@@ -46,12 +46,12 @@
       - EE2C95AB58DC2B0138D16B4FEFC4571D7C90E5AF # Yandex Disk
 
   tasks:
-   - include: tasks/applications.yml
+   - include_tasks: tasks/applications.yml
      tags: [ apps ]
-   - include: tasks/snaps.yml
+   - include_tasks: tasks/snaps.yml
      tags: [ apps ]
-   - include: tasks/git.yml
-   - include: tasks/make.yml
-   - include: tasks/files.yml
-   - include: tasks/a2dp-bluetooth-pulseaudio.yml
+   - include_tasks: tasks/git.yml
+   - include_tasks: tasks/make.yml
+   - include_tasks: tasks/files.yml
+   - include_tasks: tasks/a2dp-bluetooth-pulseaudio.yml
 ...

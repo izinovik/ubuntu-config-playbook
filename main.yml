@@ -20,6 +20,8 @@
       - kubectl
       - make
       - net-tools
+      - rclone
+      - restic
       - scrot
       - spectrwm
       - ssh

@@ -13,6 +13,7 @@
       - curl
       - dnssec-trigger
       - docker.io
+      - feh
       - git
       - jq
       - keepassxc

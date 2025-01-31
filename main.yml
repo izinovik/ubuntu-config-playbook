@@ -20,6 +20,7 @@
       - kubectl
       - make
       - net-tools
+      - pulseaudio-utils
       - rclone
       - restic
       - scrot

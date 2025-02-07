@@ -48,12 +48,18 @@
       - EE2C95AB58DC2B0138D16B4FEFC4571D7C90E5AF # Yandex Disk
 
   tasks:
-   - include_tasks: tasks/applications.yml
-     tags: [ apps ]
-   - include_tasks: tasks/snaps.yml
-     tags: [ apps ]
-   - include_tasks: tasks/git.yml
-   - include_tasks: tasks/make.yml
-   - include_tasks: tasks/files.yml
-   - include_tasks: tasks/a2dp-bluetooth-pulseaudio.yml
+    - name: Install applications
+      ansible.builtin.include_tasks: tasks/applications.yml
+      tags: [apps]
+    - name: Install snaps
+      ansible.builtin.include_tasks: tasks/snaps.yml
+      tags: [apps]
+    - name: Clone git repository with dot files
+      ansible.builtin.include_tasks: tasks/git.yml
+    - name: Run make targets
+      ansible.builtin.include_tasks: tasks/make.yml
+    - name: Copy files
+      ansible.builtin.include_tasks: tasks/files.yml
+    - name: Install file for bluetooh headset
+      ansible.builtin.include_tasks: tasks/a2dp-bluetooth-pulseaudio.yml
 ...

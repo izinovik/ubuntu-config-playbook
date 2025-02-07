@@ -38,7 +38,6 @@
       - zsh
     snaps:
       - chromium
-      - skype
       - telegram-desktop
       - zoom-client
     repos:

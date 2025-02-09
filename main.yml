@@ -43,11 +43,12 @@
       - telegram-desktop
       - zoom-client
     repos:
-      - "deb [arch=amd64] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /"
-      - "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
-      - "ppa:phoerious/keepassxc"
+      - "deb [arch=amd64] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /"
+      - "deb [arch=amd64] http://repo.yandex.ru/yandex-disk/deb/ stable main"
+      - "deb [arch=amd64] https://ppa.launchpadcontent.net/phoerious/keepassxc/ubuntu noble main"
     apt_keys:
       - EE2C95AB58DC2B0138D16B4FEFC4571D7C90E5AF # Yandex Disk
+      - D89C66D0E31FEA2874EBD20561922AB60068FCD6 # ppa:phoerious/keepassxc
     files:
       - src: files/01x11-has_option
         dest: /etc/X11/Xsession.d/01x11-has_option

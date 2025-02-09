@@ -1,22 +1,24 @@
 ---
 - name: Adding GPG keys
-  apt_key:
+  ansible.builtin.apt_key:
     id: "{{ item }}"
     keyserver: keyserver.ubuntu.com
     state: present
   loop: "{{ apt_keys }}"
 
 - name: Adding repositories
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "{{ item }}"
     state: present
   loop: "{{ repos }}"
 
 - name: Updating apt cache
-  apt: update_cache=yes cache_valid_time=3600
+  ansible.builtin.apt:
+    update_cache: yes
+    cache_valid_time: 3600
 
 - name: Installing packages
-  apt:
+  ansible.builtin.apt:
     name: "{{ item }}"
     state: present
   loop: "{{ applications }}"

@@ -43,7 +43,7 @@
       - telegram-desktop
       - zoom-client
     repos:
-      - "deb [arch=amd64] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /"
+      - "deb [arch=amd64] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /"
       - "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
       - "ppa:phoerious/keepassxc"
     apt_keys:

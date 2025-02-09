@@ -7,6 +7,7 @@
     make_targets:
       - shell
       - vim
+      - x11
     applications:
       - acpi
       - blueman

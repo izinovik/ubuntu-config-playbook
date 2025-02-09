@@ -29,6 +29,7 @@
       - ssh
       - tmux
       - unbound
+      - unbound-anchor
       - vim
       - vlc
       - xbindkeys

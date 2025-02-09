@@ -1,6 +1,6 @@
 ---
 # tasks file for ubuntu-config-playbook
-- name: Configure Ubuntu for Igor Zinovik
+- name: Configure Ubuntu 24.04 for Igor Zinovik
   hosts: localhost
   vars:
     dotfiles_dir: /home/izinovik/dotfiles

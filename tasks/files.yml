@@ -1,9 +1,9 @@
 ---
 - name: Copying 'has_option' file for XOrg (fixes ssh-agent startup during X session)
-  copy:
-    src: files/01x11-has_option
-    dest: /etc/X11/Xsession.d/01x11-has_option
+  ansible.builtin.copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     owner: root
     group: root
     mode: '0644'
-...
+  loop: "{{ files }}"

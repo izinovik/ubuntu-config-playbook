@@ -20,4 +20,3 @@
     name: "{{ item }}"
     state: present
   loop: "{{ applications }}"
-...

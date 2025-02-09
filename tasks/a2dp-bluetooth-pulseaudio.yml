@@ -4,4 +4,3 @@
     path: /etc/pulse/default.pa
     regexp: '^load-module module-card-restore'
     line: 'load-module module-card-restore restore_bluetooth_profile=true'
-...

@@ -48,6 +48,11 @@
       - "ppa:phoerious/keepassxc"
     apt_keys:
       - EE2C95AB58DC2B0138D16B4FEFC4571D7C90E5AF # Yandex Disk
+    files:
+      - src: files/01x11-has_option
+        dest: /etc/X11/Xsession.d/01x11-has_option
+      - src: files/unbound.conf
+        dest: /etc/unbound/unbound.conf
 
   tasks:
     - name: Install applications
@@ -62,6 +67,7 @@
       ansible.builtin.include_tasks: tasks/make.yml
     - name: Copy files
       ansible.builtin.include_tasks: tasks/files.yml
+      tags: [files]
     - name: Install file for bluetooh headset
       ansible.builtin.include_tasks: tasks/a2dp-bluetooth-pulseaudio.yml
 ...

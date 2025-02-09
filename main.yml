@@ -68,6 +68,3 @@
     - name: Copy files
       ansible.builtin.include_tasks: tasks/files.yml
       tags: [files]
-    - name: Install file for bluetooh headset
-      ansible.builtin.include_tasks: tasks/a2dp-bluetooth-pulseaudio.yml
-...

@@ -22,6 +22,7 @@
       - kubectl
       - make
       - net-tools
+      - nodejs
       - pulseaudio-utils
       - rclone
       - restic

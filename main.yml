@@ -59,21 +59,24 @@
 
   tasks:
     - name: Install applications
-      ansible.builtin.include_tasks: tasks/applications.yml
-      apply:
-        tags: [apps]
+      ansible.builtin.include_tasks:
+        file: tasks/applications.yml
+        apply:
+          tags: [apps]
       tags: [apps]
     - name: Install snaps
-      ansible.builtin.include_tasks: tasks/snaps.yml
-      apply:
-        tags: [apps]
+      ansible.builtin.include_tasks:
+        file: tasks/snaps.yml
+        apply:
+          tags: [apps]
       tags: [apps]
     - name: Clone git repository with dot files
       ansible.builtin.include_tasks: tasks/git.yml
     - name: Run make targets
       ansible.builtin.include_tasks: tasks/make.yml
     - name: Copy files
-      ansible.builtin.include_tasks: tasks/files.yml
-      apply:
-        tags: [files]
+      ansible.builtin.include_tasks:
+        file: tasks/files.yml
+        apply:
+          tags: [files]
       tags: [files]

@@ -2,6 +2,7 @@
 # tasks file for ubuntu-config-playbook
 - name: Configure Ubuntu 24.04 for Igor Zinovik
   hosts: localhost
+  become: yes
   vars:
     dotfiles_dir: /home/izinovik/dotfiles
     make_targets:

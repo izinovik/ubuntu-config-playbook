@@ -23,6 +23,7 @@
       - make
       - net-tools
       - nodejs
+      - npm
       - pulseaudio-utils
       - rclone
       - restic

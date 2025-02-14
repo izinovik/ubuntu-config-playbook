@@ -42,6 +42,7 @@
       - xxkb
       - zsh
     snaps:
+      - chezmoi
       - chromium
       - telegram-desktop
       - zoom-client

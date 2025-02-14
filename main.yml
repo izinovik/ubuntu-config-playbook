@@ -25,6 +25,7 @@
       - nodejs
       - npm
       - pulseaudio-utils
+      - rbenv
       - rclone
       - restic
       - scrot
@@ -34,6 +35,8 @@
       - unbound
       - unbound-anchor
       - vim
+      - virtualenv
+      - virtualenvwrapper
       - vlc
       - xbindkeys
       - xclip

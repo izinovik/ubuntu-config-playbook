@@ -77,8 +77,8 @@
       tags: [apps]
     - name: Clone git repository with dot files
       ansible.builtin.include_tasks: tasks/git.yml
-    - name: Run make targets
-      ansible.builtin.include_tasks: tasks/make.yml
+    - name: Run chezmoi
+      ansible.builtin.include_tasks: tasks/chezmoi.yml
     - name: Copy files
       ansible.builtin.include_tasks:
         file: tasks/files.yml

@@ -1,0 +1,4 @@
+---
+- name: Install dotfiles
+  ansible.builtin.command:
+    cmd: chezmoi init --apply izinovik

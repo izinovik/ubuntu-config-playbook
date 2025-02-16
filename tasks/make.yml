@@ -1,6 +1,0 @@
----
-- name: Install dotfiles
-  community.general.make:
-    chdir: "{{ dotfiles_dir }}"
-    target: "{{ item }}"
-  loop: "{{ make_targets }}"

@@ -1,5 +1,6 @@
 ---
 - name: Install dotfiles
+  become: false
   ansible.builtin.command:
     cmd: chezmoi init --apply izinovik
   register: retcode

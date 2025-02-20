@@ -16,6 +16,7 @@
       - dnssec-trigger
       - docker.io
       - feh
+      - ffmpeg
       - git
       - jq
       - keepassxc

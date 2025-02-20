@@ -21,8 +21,8 @@
       - keepassxc
       - kubectl
       - make
-      - net-tools
-      - nodejs
+      - net-tools           # I use netstat from net-tools
+      - nodejs              # needed for vims CoC plugin
       - npm
       - pulseaudio-utils
       - rbenv

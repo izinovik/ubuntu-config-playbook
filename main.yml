@@ -78,7 +78,11 @@
       tags: [apps]
 
     - name: Run chezmoi
-      ansible.builtin.include_tasks: tasks/chezmoi.yml
+      ansible.builtin.include_tasks:
+        file: tasks/chezmoi.yml
+        apply:
+        tags: [chezmoi]
+      tags: [chezmoi]
 
     - name: Copy files
       ansible.builtin.include_tasks:

@@ -81,7 +81,7 @@
       ansible.builtin.include_tasks:
         file: tasks/chezmoi.yml
         apply:
-        tags: [chezmoi]
+          tags: [chezmoi]
       tags: [chezmoi]
 
     - name: Copy files

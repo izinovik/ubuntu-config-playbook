@@ -17,6 +17,7 @@
       - docker.io
       - feh
       - ffmpeg
+      - fzf
       - git
       - jq
       - keepassxc

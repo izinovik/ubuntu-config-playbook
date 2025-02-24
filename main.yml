@@ -4,7 +4,6 @@
   hosts: localhost
   become: true
   vars:
-    dotfiles_dir: /home/izinovik/dotfiles
     applications:
       - acpi
       - blueman

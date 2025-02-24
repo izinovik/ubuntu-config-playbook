@@ -5,10 +5,6 @@
   become: true
   vars:
     dotfiles_dir: /home/izinovik/dotfiles
-    make_targets:
-      - shell
-      - vim
-      - x11
     applications:
       - acpi
       - blueman

@@ -40,6 +40,7 @@
       - xterm
       - xtrlock
       - xxkb
+      - yandex-disk
       - zsh
     snaps:
       - chezmoi

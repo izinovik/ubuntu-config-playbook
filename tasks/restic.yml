@@ -1,0 +1,28 @@
+---
+- name: Install restic service file
+  ansible.builtin.copy:
+    src: files/restic-backup.service
+    dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/restic-backup.service"
+    owner: izinovik
+    mode: "0644"
+
+- name: Install restic timer file
+  ansible.builtin.copy:
+    src: files/restic-backup.timer
+    dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/restic-backup.timer"
+    owner: izinovik
+    mode: "0644"
+
+- name: Enable systemd restic-backup.timer
+  become: false
+  ansible.builtin.systemd_service:
+    name: restic-backup.timer
+    scope: user
+    state: started
+    enabled: true
+  environment:
+    XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_id }}"
+
+- name: Fill ~/.restic-password file with password and configure rclone backend
+  ansible.builtin.debug:
+    msg: "Please do not forget to populate ~/.restic-password file and configure rclone backend for restic"

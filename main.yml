@@ -82,6 +82,13 @@
           tags: [chezmoi]
       tags: [chezmoi]
 
+    - name: Install backup service
+      ansible.builtin.include_tasks:
+        file: tasks/restic.yml
+        apply:
+          tags: [restic]
+      tags: [restic]
+
     - name: Copy files
       ansible.builtin.include_tasks:
         file: tasks/files.yml

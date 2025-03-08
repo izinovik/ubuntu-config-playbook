@@ -4,7 +4,6 @@ Description=restic backup
 [Service]
 Type=exec
 EnvironmentFile=%h/.restic.env
-Environment=RESTIC_REPOSITORY=rclone:ydisk:backup/restic
 WorkingDirectory=%h
 IOSchedulingClass=idle
 ExecStart=/usr/bin/restic backup --files-from %h/restic-backup.list

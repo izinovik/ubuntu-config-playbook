@@ -23,6 +23,6 @@
   environment:
     XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_id }}"
 
-- name: Fill ~/.restic-password file with password and configure rclone backend
+- name: Fill ~/.restic.env file with password and configure rclone backend
   ansible.builtin.debug:
-    msg: "Please do not forget to populate ~/.restic-password file and configure rclone backend for restic"
+    msg: "Please do not forget to populate ~/.restic.env file and configure rclone backend for restic"

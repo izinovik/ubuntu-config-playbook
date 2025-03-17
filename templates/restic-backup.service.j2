@@ -1,8 +1,9 @@
+{{ ansible_managed | comment }}
 [Unit]
 Description=restic backup
 
 [Service]
-Type=exec
+Type=oneshot
 EnvironmentFile=%h/.restic.env
 WorkingDirectory=%h
 IOSchedulingClass=idle

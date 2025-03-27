@@ -19,6 +19,7 @@
       - kubectl
       - make
       - net-tools           # I use netstat from net-tools
+      - neovim
       - nodejs              # needed for vims CoC plugin
       - npm
       - pulseaudio-utils

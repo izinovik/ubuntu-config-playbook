@@ -8,3 +8,4 @@ EnvironmentFile=%h/.restic.env
 WorkingDirectory=%h
 IOSchedulingClass=idle
 ExecStart=/usr/bin/restic backup --files-from %h/restic-backup.list
+KillMode=process

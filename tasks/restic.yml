@@ -17,18 +17,12 @@
   become: false
   ansible.builtin.systemd_service:
     name: restic-backup.timer
+    daemon_reload: true
     scope: user
     state: started
     enabled: true
   environment:
     XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_id }}"
-
-- name: Reload config for systemd --user instance
-  become: false
-  ansible.builtin.command:
-    cmd: systemctl --user daemon-reload
-  register: retcode
-  changed_when: retcode.rc != 0
 
 - name: Fill ~/.restic.env file with password and configure rclone backend
   ansible.builtin.debug:

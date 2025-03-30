@@ -7,5 +7,5 @@ Usage
 =====
 
 ```
-$ ansible-playbook main.yml
+$ ansible-playbook -b --ask-become-pass main.yml
 ```

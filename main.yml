@@ -10,6 +10,7 @@
       - curl
       - dnssec-trigger
       - docker.io
+      - docker-compose-v2
       - feh
       - ffmpeg
       - fzf

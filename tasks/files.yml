@@ -7,3 +7,6 @@
     group: root
     mode: '0644'
   loop: "{{ files }}"
+  notify:
+    - Restart unbound
+    - Restart dnssec-triggerd

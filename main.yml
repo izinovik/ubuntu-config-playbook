@@ -97,3 +97,16 @@
         apply:
           tags: [files]
       tags: [files]
+
+  handlers:
+    - name: Restart unbound
+      become: yes
+      ansible.builtin.service:
+        name: unbound
+        state: restarted
+
+    - name: Restart dnssec-triggerd
+      become: yes
+      ansible.builtin.service:
+        name: dnssec-triggerd
+        state: restarted

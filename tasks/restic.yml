@@ -1,17 +1,13 @@
 ---
 - name: Install restic service file
   ansible.builtin.template:
-    src: templates/restic-backup.service.j2
-    dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/restic-backup.service"
-    owner: izinovik
+    src: "templates/{{ item.unit_name }}.j2"
+    dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/{{ item.unit_name }}"
+    owner: "{{ ansible_user_id }}"
     mode: "0644"
-
-- name: Install restic timer file
-  ansible.builtin.template:
-    src: templates/restic-backup.timer.j2
-    dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/restic-backup.timer"
-    owner: izinovik
-    mode: "0644"
+  with_items:
+    - unit_name: restic-backup.service
+    - unit_name: restic-backup.timer
 
 - name: Enable systemd restic-backup.timer
   become: false

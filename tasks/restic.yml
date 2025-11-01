@@ -5,7 +5,7 @@
     dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/{{ item.unit_name }}"
     owner: "{{ ansible_user_id }}"
     mode: "0644"
-  with_items:
+  loop:
     - unit_name: restic-backup.service
     - unit_name: restic-backup.timer
 

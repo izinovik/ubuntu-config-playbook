@@ -2,6 +2,6 @@
 - name: Install dotfiles
   become: false
   ansible.builtin.command:
-    cmd: "chezmoi init --apply {{ ansible_user_id }}"
+    cmd: chezmoi init --apply izinovik
   register: retcode
   changed_when: retcode.rc != 0

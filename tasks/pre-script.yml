@@ -1,0 +1,32 @@
+---
+
+- name: Create /etc/unbound and ~/.config/chezmoi
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: directory
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: '0755'
+  loop:
+    - path: /etc/unbound
+      owner: root
+      group: root
+    - path: ~/.config/chezmoi
+      owner: izinovik
+      group: izinovik
+
+- name: Download root.hints for unbound
+  ansible.builtin.get_url:
+    url: https://www.internic.net/domain/named.cache
+    dest: /etc/unbound/root.hints
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Configure chezmoi
+  ansible.builtin.copy:
+    src: files/chezmoi.toml
+    dest: /home/izinovik/config/chezmoi/chezmoi.toml
+    owner: izinovik
+    group: izinovik
+    mode: '0644'

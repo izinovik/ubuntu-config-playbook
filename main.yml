@@ -17,7 +17,6 @@
       - git
       - jq
       - keepassxc
-      - kubectl
       - make
       - net-tools           # I use netstat from net-tools
       - neovim
@@ -50,7 +49,6 @@
       - telegram-desktop
       - zoom-client
     repos:
-      - "deb [arch=amd64] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /"
       - "deb [arch=amd64] http://repo.yandex.ru/yandex-disk/deb/ stable main"
       - "deb [arch=amd64] https://ppa.launchpadcontent.net/phoerious/keepassxc/ubuntu noble main"
     apt_keys:
@@ -63,6 +61,13 @@
         dest: /etc/unbound/unbound.conf
 
   tasks:
+    - name: Pre-configure unbound and chezmoi
+      ansible.builtin.include_tasks:
+        file: tasks/pre-script.yml
+        apply:
+          tags: [pre]
+      tags: [pre]
+
     - name: Install applications
       ansible.builtin.include_tasks:
         file: tasks/applications.yml
@@ -91,7 +96,7 @@
           tags: [restic]
       tags: [restic]
 
-    - name: Copy files
+    - name: Copy configuration files
       ansible.builtin.include_tasks:
         file: tasks/files.yml
         apply:

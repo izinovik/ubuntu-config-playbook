@@ -11,7 +11,7 @@
     - path: /etc/unbound
       owner: root
       group: root
-    - path: ~/.config/chezmoi
+    - path: /home/izinovik/config/chezmoi
       owner: izinovik
       group: izinovik
 

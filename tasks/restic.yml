@@ -3,7 +3,7 @@
   ansible.builtin.template:
     src: "templates/{{ item.unit_name }}.j2"
     dest: "{{ lookup('env', 'HOME') }}/.config/systemd/user/{{ item.unit_name }}"
-    owner: "{{ ansible_user_id }}"
+    owner: "{{ ansible_facts['user_id'] }}"
     mode: "0644"
   loop:
     - unit_name: restic-backup.service
@@ -18,7 +18,7 @@
     state: started
     enabled: true
   environment:
-    XDG_RUNTIME_DIR: "/run/user/{{ ansible_user_id }}"
+    XDG_RUNTIME_DIR: "/run/user/{{ ansible_facts['user_id'] }}"
 
 - name: Fill ~/.restic.env file with password and configure rclone backend
   ansible.builtin.debug:
